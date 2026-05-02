@@ -86,7 +86,7 @@ class ModrinthResolver:
         to_resolve = []
         for slug in target_slugs:
             project = self._get_project(slug)
-            to_resolve.append(project["id"])
+            to_resolve.append(project["slug"])
 
         resolved_map: dict[str, dict] = {}  # project_id -> version_object
         forbidden_projects: set[str] = set()  # Set of project_ids that are 'incompatible'
